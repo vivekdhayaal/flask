@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee's average salary</title>
+</head>
+<body>
+<table>
+    <tr>
+ 	{% for rec in sal_rec %}
+ 	 <th> {{ rec }} </th>
+ 	{% endfor %}
+    </tr>
+    {% for rec_inf in info %}
+    <tr>
+    {% for data in rec_inf %}
+    <td>{{ data }}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<h1> Average salary is {{ avg_sal }} </h1>
+ <table>
+	<tr>
+	<th>Emp_below_avg_salary</th>
+	</tr>
+	{% for emp in emp_below_avg %}
+	<tr>
+    <td>{{ emp }}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee details</title>
+<body>
+ <h2> Employee Database </h2>
+ <table>
+ <tr>
+ 	{% for emp in emp_rec %}
+ 	 <th> {{ emp }} </th>
+ 	{% endfor %}
+ </tr>
+ {% for emp_inf in emp_info %}
+  <tr>
+  {% for info in emp_inf %}
+  <td>{{ info }}</td>
+  {% endfor %}
+  </tr>
+  {% endfor %}
+ </table>
+ 
+
+</body>
+</html>
